@@ -1,0 +1,132 @@
+/* --------------------------------------Modificaciones para el fondo de la pagina o cuerpo*/
+body {
+    /*background-image: linear-gradient(90deg,#80bfff, #dcdcdc);--------------------------------------------
+    /*background-size: 100%;/* Ancho del patrón---------------------ESTO ES PARA PONERLE FONDO DE COLOR A LA PAGINA
+    /*background-repeat: repeat-y; /* Repetir verticalmente ------------------------------------------------*/
+    background-image: url('imagenes-Diseño/no1.jpeg'); /* Imagen de fondo */
+    background-size: cover;     /* Lograr expandir la imagen a toda la pagina */
+    background-attachment: fixed; /* esto fija la imagen de fondo */
+    margin: 0px;
+}
+/* ---------------------------------------------------------- Cuadro Menu y titulo */
+.Cuadro-Tiulo {
+    display: flex;
+    width: 100% ;
+    height: 70px;
+    padding: 10;
+    align-items: center;
+    border-bottom: #000 solid 1px;
+    background-color: rgba(28, 65, 146, 0.658); /* Azul con 65% de transparencia */
+    justify-content: right;
+}
+/* ---------------------------------------------------------- Icono de menu */
+.IconMenu {
+    display: flex;
+    font-size: 40px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    margin: 30px;
+    transition: transform 0.3s;
+}
+/* ---------------------------------------------------------- Rotacion del icono al click */
+.IconMenu.icon-rot {
+    transform: rotate(180deg);
+}
+/* ---------------------------------------------------------- Menu desplegable a la derecha */
+.LineaMenu {
+    height: 60px;
+    line-height: 2.5;
+    width: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 70px;
+    background-color: rgba(28, 65, 146,); /* Azul con 100% de transparencia */
+    overflow: hidden;
+    transition: 0.4s;
+    padding-top: 20px;
+}
+/* ---------------------------------------------------------- Acomodo y diseño de bienvenida usuario */
+.user-desing {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    text-align: center;
+    justify-content: center;
+    height: auto;
+    width: max-content;
+    transition: 0.3s;
+    font-family: "lato", sans-serif;
+    font-weight: bold;
+    text-shadow: 5px 5px 4px #333; /* Desplazamiento x, Desplazamiento y, Desenfoque, Color en hexadecimal */
+    font-size: 20px;
+    text-decoration: none;
+    color: #FBF1B0;
+}
+/* ---------------------------------------------------------- Acomodo y diseño de las opciones del menu */
+.op-menu {
+    /*border: #000 1px solid; /* lo utilice para revisar dimensiones */
+    text-align: center;
+    justify-content: center;
+    width: 15%;
+    height: 50px;
+    transition: 0.3s;
+}
+.op-menu a{
+    font-family: "lato", sans-serif;
+    font-weight: bold;
+    text-shadow: 5px 5px 4px #333; /* Desplazamiento x, Desplazamiento y, Desenfoque, Color en hexadecimal */
+    font-size: 20px;
+    display: inline;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.2s;
+}
+.op-menu:hover {
+    transform: scale(1.1);
+}
+/* ---------------------------------------------------------- Tamaño al desplegar menu */
+.LineaMenu.activo {
+    width: 90%;
+}
+/* -------------------------------------------------------------------------Encabezado de nuestra pagina*/
+.Titulo{     
+    display: flex;
+    justify-content: center;
+    font-size:30px;
+    font-style: oblique;
+    font-weight: 999;
+    font-family: "lato", sans-serif;
+    text-shadow: 5px 2px 4px #333; /* Desplazamiento x, Desplazamiento y, Desenfoque, Color en hexadecimal */
+    color: #000;
+    margin: 20px;
+}
+/* -------------------------------------------------------------------------Ubicacion y boton de nuestra pagina*/
+.InvTabla {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+}
+.Shopping {
+    display: flex;
+    background-color: #ffff00;
+    font-family: "lato", sans-serif;
+    font-weight: 600;
+    padding: 12px 16px;
+    text-align: center;
+    font-size: 30px;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 5%;
+    transition: 0.3s;
+    border: 0px;
+}
+.Shopping a {
+    text-decoration: none;
+    color: #000;
+}
+.Shopping:hover {
+    transform: scale(1.1);
+}

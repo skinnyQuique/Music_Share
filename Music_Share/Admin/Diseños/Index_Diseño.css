@@ -1,0 +1,174 @@
+/* --------------------------------------Modificaciones para el fondo de la pagina o cuerpo*/
+body {
+    /*background-image: linear-gradient(90deg,#80bfff, #dcdcdc);--------------------------------------------
+    /*background-size: 100%;/* Ancho del patrón---------------------ESTO ES PARA PONERLE FONDO DE COLOR A LA PAGINA
+    /*background-repeat: repeat-y; /* Repetir verticalmente ------------------------------------------------*/
+    background-image: url('imagenes-Diseño/no1.jpeg'); /* Imagen de fondo */
+    background-size: cover;     /* Lograr expandir la imagen a toda la pagina */
+    background-attachment: fixed; /* esto fija la imagen de fondo */
+    margin: 0px;
+}
+/* ---------------------------------------------------------- Cuadro Menu y titulo */
+.Cuadro-Tiulo {
+    display: flex;
+    width: 100% ;
+    height: 70px;
+    padding: 10;
+    align-items: center;
+    border-bottom: #000 solid 1px;
+    background-color: rgba(28, 65, 146, 0.658); /* Azul con 65% de transparencia */
+    justify-content: right;
+}
+/* ---------------------------------------------------------- Icono de menu */
+.IconMenu {
+    display: flex;
+    font-size: 40px;
+    cursor: pointer;
+    color: #fff;
+    margin: 30px;
+    transition: transform 0.3s;
+}
+/* ---------------------------------------------------------- Rotacion del icono al click */
+.IconMenu.icon-rot {
+    transform: rotate(180deg);
+}
+/* ---------------------------------------------------------- Menu desplegable a la derecha */
+.LineaMenu {
+    height: 60px;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-right: 70px;
+    background-color: rgba(28, 65, 146,); /* Azul con 100% de transparencia */
+    overflow: hidden;
+    transition: 0.4s;
+    padding-top: 30px;
+}
+/* ---------------------------------------------------------- Acomodo de las opciones del menu */
+.LineaMenu a {
+    padding: 20px;
+    display: inline;
+    text-decoration: none;
+    font-size: 18px;;
+    color: #fff;
+    transition: 0.2s;
+}
+/* ---------------------------------------------------------- Tamaño al desplegar menu */
+.LineaMenu.activo {
+    width: 65%;
+}
+/* -------------------------------------------------------------------------Encabezado de nuestra pagina*/
+.Titulo{     
+    font-size:45px;
+    margin-left: 40px;
+    font-family: "lato", sans-serif;
+    flex: 2;
+    color: #fff;
+    text-shadow: 5px 5px 4px #333; /* Desplazamiento x, Desplazamiento y, Desenfoque, Color en hexadecimal */
+}
+/*------------------------------------------------------------------------------------ formato contenedor */
+.Tabla {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;           /* centramos elemento de manera horizontal*/
+}
+/* ------------------------------------------------------------------------------------formato de formulario */
+.form {
+    background-color: white;
+    width: 500px;
+    border-radius: 8px;         /* este se encarga de darle cierto margen redondo*/
+    padding: 20px 40px;
+    box-shadow: 0 10px 25px rgba(92, 99, 105, .8);
+             /*Se ajusta a cualquier pantalla de dispositivo*/
+}
+/* ------------------------------------------------------------------------------------Titulo de contenedor*/
+.title {
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+/* ------------------------------------------------------------------------------------Formato casillas */
+.Casillas {
+    position: relative;     /*lo pocisionabos con respecto al contenedor*/
+    height: 50px;
+    width: 100%;
+    margin-bottom: 17px;
+}
+.Ingreso {
+    position: absolute;     /*fija un elemento de manera absoluta a su contenedor*/
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #DADCE0;
+    border-radius: 7px;
+    font-size: 16px;
+    padding: 0 20px;        /*agregamos espacio de relleno al elemento*/
+    outline: none;
+    background: none;
+    z-index: 1;             /*aqui se transaladara la etiqueta hasta llegar a 0*/
+}
+/*---------------------------------------------------------------------------------ocultar para evitar sobre escritura */
+::placeholder {
+    color: transparent;
+}
+/* ------------------------------------------------------------------------------------formatos label */
+.label {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 0 4px;
+    background-color: white;
+    color: #DADCE0;
+    font-size: 16px;
+    transition: 0.5s;       /*esta hace el efecto de animacion-*/
+    z-index: 0;             /*Aqui se colocora la etiqueta mayor*/
+}
+/*-----------------------------------------------------------------------------combinacion de formatos para transicion */
+.Ingreso:focus + .label {
+    top: -7px;
+    left: 3px;
+    z-index: 10;            /*coloca este valor mayor sobre el menor*/
+    font-size: 14px;
+    font-weight: 600;
+    color: #687EFF;
+}
+/* ------------------------------------------------------------------------------------------resaltar casilla */
+.Ingreso:focus {
+    border: 2px solid #687EFF;
+}
+.Ingreso:not(:placeholder-shown)+ .label {
+    top: -7px;
+    left: 3px;
+    z-index: 10;
+    font-size: 14px;
+    font-weight: 600;
+}
+/* -------------------------------------------------------------------------------------------------mensaje */
+#mensaje {
+    color: #f00;
+    font-weight: bold;
+    font-family: "lato", sans-serif;
+    font-size: 24px;
+}
+/* ------------------------------------------------------------------------------------boton de mandar datos */
+.Boton{     
+    display: block;
+    margin-left: auto;
+    padding: 15px 30px;
+    border: none;
+    background-color: #80B3FF;
+    color: black;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s;   /* Movimiento del boton*/
+    margin-top: 30px;
+}
+/* --------------------------------------------------------------------------------- animacion de boton de mandar datos*/
+.Boton:hover {
+    transform: scale(1.1); /* Escala el botón al 110% cuando el cursor esté sobre él */
+    background-color: #687EFF;
+    transform: translateY(-2px);        /*mover elemento 2 pixeles arriba*/
+}

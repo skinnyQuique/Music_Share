@@ -1,0 +1,143 @@
+/* --------------------------------------Modificaciones para el fondo de la pagina o cuerpo*/
+body {
+    /*background-image: linear-gradient(90deg,#80bfff, #dcdcdc);--------------------------------------------
+    /*background-size: 100%;/* Ancho del patrón---------------------ESTO ES PARA PONERLE FONDO DE COLOR A LA PAGINA
+    /*background-repeat: repeat-y; /* Repetir verticalmente ------------------------------------------------*/
+    background-image: url('imagenes-Diseño/fondo-8.jpg'); /* Imagen de fondo */
+    background-size: cover;     /* Lograr expandir la imagen a toda la pagina */
+    background-attachment: fixed; /* esto fija la imagen de fondo */
+    margin: 0px;
+}
+/* -------------------------------------- Se refiere al cuadro del menu o encabezado de pagina inicial*/
+header {
+    background-color: #ffff00;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+}
+.icono {
+    width: 40px;
+    height: 30px;
+    filter: grayscale(100%);
+}
+/* -------------------------------------- Tabla de navegacion y espacios*/
+.TablaNav {
+    width: 100%;
+    /* border: solid #000 1px;  Opcion que suo para revisar diseño de espacio*/
+}
+/* -------------------------------------- opcines de navegacion (td)*/
+.OpNav {
+    width: 20%;
+    /* border: solid #000 1px; */
+}
+/* -------------------------------------- Opciones de navegacion (a) esto hace toda la chamba*/
+.OpNav a {
+    text-decoration: none;
+    font-family: "lato", sans-serif;
+    color: #000;
+    font-weight:900;
+    width: 50%;
+    /* border: solid #000 1px; */
+    transition: 0.3s;
+}
+/* -------------------------------------- Movimiento de opciones al acercar el cursor */
+.OpNav:hover {
+    transform: scale(1.1);
+}
+/* -------------------------------------- tabla de productos*/
+.Detalles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 18px;
+    margin: 40px;
+    /* border: solid #000 1px; */
+}
+/* -------------------------------------- Casillas de productos e informacion*/
+.Casilla-Producto {
+    justify-content: left;
+    text-align: left;
+    width: auto; /* Ancho de cada producto */
+    height: auto;
+    margin-top: 40px;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.788);
+    
+    /*border: solid #000 1px; */ 
+}
+.Casilla-Producto a {
+    text-decoration: none;
+    font-family: "lato", sans-serif;
+    color: #000;
+    font-size: 18px;
+    
+    /*border: solid #000 1px; */
+}
+/* -------------------------------------- Imagen de articulo o producto*/
+.Casilla-Producto img {
+    width: auto;
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+    /*border: solid #000 1px; */
+}
+/* -------------------------------------- Diseño de los precios*/
+.Precio {
+    font-family: "lato", sans-serif;
+    font-size: 58px;
+    font-weight: 700;
+    margin: 2px;
+    /*border: solid #000 1px; */
+}
+/* -------------------------------------- Diseño de las palabras pequeñas like codigo*/
+.Code {
+    font-family: "lato", sans-serif;
+    font-size: 24px;
+    margin: 2px;
+    /*border: solid #000 1px; */
+}
+/* -------------------------------------- Boton para agregar a carrito*/
+.Boton {
+    display: inline-block;
+    background-color: #ffff00;
+    color: #000;
+    font-family: monospace;
+    font-weight: 600;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 2px;
+    cursor: pointer;
+    border-radius: 3%;
+    transition: 0.3s;
+    border: 0px;
+}
+.Boton:hover {
+    transform: scale(1.1);
+}
+/* -------------------------------------- espacio para seleccionar cantidaes*/
+.Pzs {
+    width: auto;
+    padding: 9px;
+    font-size: 16px;
+    border: 1px solid #7180b633;
+    border-radius: 10%;
+    margin: 15px;
+    background-color: #fff;
+}
+/* -------------------------------------- Se refiere al cuadro del menu o encabezado de pagina final*/
+footer {
+    background-color: #ffff00;
+    color: #000;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+.iconos {
+    width: 50px;
+    height: 50px;
+    filter: grayscale(100%);
+}

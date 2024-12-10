@@ -1,0 +1,293 @@
+/* --------------------------------------Modificaciones para el fondo de la pagina o cuerpo*/
+body {
+    /*background-image: linear-gradient(90deg,#80bfff, #dcdcdc);--------------------------------------------
+    /*background-size: 100%;/* Ancho del patrón---------------------ESTO ES PARA PONERLE FONDO DE COLOR A LA PAGINA
+    /*background-repeat: repeat-y; /* Repetir verticalmente ------------------------------------------------*/
+    background-image: url('imagenes-Diseño/no1.jpeg'); /* Imagen de fondo */
+    background-size: cover;     /* Lograr expandir la imagen a toda la pagina */
+    background-attachment: fixed; /* esto fija la imagen de fondo */
+    margin: 0px;
+}
+/* ---------------------------------------------------------- Cuadro Menu y titulo */
+.Cuadro-Tiulo {
+    display: flex;
+    width: 100% ;
+    height: 70px;
+    padding: 10;
+    align-items: center;
+    border-bottom: #000 solid 1px;
+    background-color: rgba(28, 65, 146, 0.658); /* Azul con 65% de transparencia */
+    justify-content: right;
+}
+/* ---------------------------------------------------------- Icono de menu */
+.IconMenu {
+    display: flex;
+    font-size: 40px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    margin: 30px;
+    transition: transform 0.3s;
+}
+/* ---------------------------------------------------------- Rotacion del icono al click */
+.IconMenu.icon-rot {
+    transform: rotate(180deg);
+}
+/* ---------------------------------------------------------- Menu desplegable a la derecha */
+.LineaMenu {
+    height: 60px;
+    line-height: 2.5;
+    width: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 70px;
+    background-color: rgba(28, 65, 146,); /* Azul con 100% de transparencia */
+    overflow: hidden;
+    transition: 0.4s;
+    padding-top: 20px;
+}
+/* ---------------------------------------------------------- Acomodo y diseño de bienvenida usuario */
+.user-desing {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    text-align: center;
+    justify-content: center;
+    height: auto;
+    width: max-content;
+    transition: 0.3s;
+    font-family: "lato", sans-serif;
+    font-weight: bold;
+    text-shadow: 5px 5px 4px #333; /* Desplazamiento x, Desplazamiento y, Desenfoque, Color en hexadecimal */
+    font-size: 20px;
+    text-decoration: none;
+    color: #FBF1B0;
+}
+/* ---------------------------------------------------------- Acomodo y diseño de las opciones del menu */
+.op-menu {
+    /*border: #000 1px solid; */ /* lo utilice para revisar dimensiones */
+    text-align: center;
+    justify-content: center;
+    width: 15%;
+    height: 50px;
+    transition: 0.3s;
+}
+.op-menu a{
+    font-family: "lato", sans-serif;
+    font-weight: bold;
+    text-shadow: 5px 5px 4px #333; /* Desplazamiento x, Desplazamiento y, Desenfoque, Color en hexadecimal */
+    font-size: 20px;
+    display: inline;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.2s;
+}
+.op-menu:hover {
+    transform: scale(1.1);
+}
+/* ---------------------------------------------------------- Tamaño al desplegar menu */
+.LineaMenu.activo {
+    width: 90%;
+}
+.Titulo{     
+    display: flex;
+    justify-content: center;
+    font-size:30px;
+    font-style: oblique;
+    font-weight: 999;
+    font-family: "lato", sans-serif;
+    text-shadow: 5px 2px 4px #333; /* Desplazamiento x, Desplazamiento y, Desenfoque, Color en hexadecimal */
+    color: #000;
+    margin: 20px;
+}
+/* -------------------------------------------------------------------------Ubicacion y boton de nuestra pagina*/
+.InvTabla {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+}
+/* ---------------------------------------------------------------Fila de titulo para la tabla*/
+#TituloTB{   
+    justify-content: center;
+    height: 35px;
+    border: solid 1px rgba(13, 90, 126,);     /*Coloco bordes solidos para esta fila*/
+    background-color: rgb(61, 99, 156); 
+    color: #fff;
+    text-shadow: 2px 2px 4px #333; /* Desplazamiento x, Desplazamiento y, Desenfoque, Color en hexadecimal */
+}
+/* ---------------------------------------------------------------------Modificaciones la seccion titulo del "ID"*/
+#Columid{        
+    border-radius: 0;
+    font-size: large;
+}
+ /* ----------------------------------------------------------------Modificaciones la seccion titulo de "Eliminar"*/
+#Accion{        
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+/* ----------------------------------------------------------------------------------------Fuente del titulo de la tabla*/
+.font{       
+    font-family: Arial, Helvetica, sans-serif;      /*Cambio la letra de la fila de la tabla tratando de tener que si en caso de no tener disponible pase a la siguiente*/
+}
+/* ----------------------------------------------------------------------------------------Modificaciones de la tabla*/
+.Tabla-Mayor{
+    display: flex;
+    flex: auto;
+    flex-wrap: wrap;
+    background-color: rgb(255, 255, 255, .20); /* Azul con 50% de transparencia */
+    margin: 10px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    
+}
+/* ----------------------------------------------------------------------------------------Modificaciones de la tabla*/
+.tabla{     
+    display: flex; /* Para colocar la tabla*/
+    flex: auto;
+    margin:auto;    /* Definimos el margen interior*/
+    border: solid 1px rgb(8, 62, 87);   /* Colocamos los bordes */
+    border-color: #80BFFF;          /* Para dar color al borde*/
+    width: 80%;  /* ancho de tabla*/
+    height: auto;   /* altura de tabla*/
+    background-color: rgb(152, 228, 255, .50); /* gris con 30% de transparencia */
+}
+/* --------------------------------------------------------------------------------------Cuadro del ID de cada persona*/
+.id{    
+    display: flex;  /* Para centrar el contenido*/
+    justify-content: center;    /* centramos contenido*/
+    align-items: center;    /* alineamos interior para centrarlo*/
+    flex: 1;                /* Definimos cuanta anchura abarca*/
+    padding: auto;  /* auto ajusta al contenido*/
+    border: solid 1px #fff;
+    font-size: 30px;
+    
+}
+/* ---------------------------------------------------------------------------------Cuadro del Nombre de cada persona*/
+.name{  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 9;
+    padding-left: 10px;
+    padding: auto;
+    border: solid 1px #fff;
+    font-size: 20px;                /* Tamaño de fuente*/
+    /*white-space: nowrap; /* En caso de que el nombre sea tan largo lo resume a puntos suspensivos*/
+    /*overflow: hidden;*/
+    /*text-overflow: ellipsis; */
+    
+}
+/* -------------------------------------------------------------------------------Cuadro del Correo de cada persona*/
+.Correo{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 9;
+    padding: auto;
+    border: solid 1px #fff;
+    font-size: 20px;
+    padding-left: 10px;
+
+}
+ /* --------------------------------------------------------------------------------Cuadro del Rol de cada persona*/
+.roles{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 2;
+    padding: auto;
+    border: solid 1px #fff;
+    font-size: 20px;
+
+}
+ /* ---------------------------------------------------------------Cuadro del boton de "eliminar" de cada persona*/
+.Acciones {   
+    flex: 3;
+    padding: auto;
+    border: solid 1px #fff;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+/* --------------------------------------------------------------------------------------------Boton de editar*/
+.Boton {
+    width: 55px;
+    height: 50px;
+    margin: 3;
+}
+/* --------------------------------------------------------------------------------------------Boton de eliminar*/
+.Eliminar{    
+    margin: 3 ;
+    width: auto;
+    height: 38px;
+    cursor: pointer;    /* cambia el cursor al acercarse*/
+    transition: 0.3s;   /* Movimiento del boton*/
+}
+.Eliminar:hover { /*Esto es para la animacion del boton*/
+    transform: scale(1.1); /* Escala el botón al 110% cuando el cursor esté sobre él */
+    filter:invert(16%) sepia(82%) saturate(8888%) hue-rotate(359deg) brightness(101%) contrast(109%)
+}
+/* --------------------------------------------------------------------------------------------Boton de regreso*/
+.NewBoton{
+    margin: 20;
+    justify-content: right;
+    font-size: large;
+    width: 190px;
+    height: 50px;
+    cursor: pointer;    /* cambia el cursor al acercarse*/
+    border-radius: 10px;
+    transition: 0.3s;   /* Movimiento del boton*/
+    background-color: #80B3FF;
+}
+.NewBoton:hover { /*Esto es para la animacion del boton*/
+    transform: scale(1.1); /* Escala el botón al 110% cuando el cursor esté sobre él */
+    background-color: #687EFF; 
+    transform: translateY(-2px);        /*mover elemento 2 pixeles arriba*/
+    color: #fff;
+    text-shadow: 2px 2px 4px #333; /* Desplazamiento x, Desplazamiento y, Desenfoque, Color en hexadecimal */
+    font-weight: bold;
+}
+.Container {
+    font-family: Arial, Helvetica, sans-serif;   
+    justify-content: space-between;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    border: solid 1px rgb(8, 62, 87);   /* Colocamos los bordes */
+    border-color: #9B9B9B;          /* Para dar color al borde*/
+    width: 100%;  /* ancho de tabla*/
+    height: auto;   /* altura de tabla*/
+    background-color: rgb(152, 228, 255, .50);
+}
+.TEXTOT {
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+}
+.Total {
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    font-size: 30px;  
+    text-align: center;
+    justify-content: center;
+    vertical-align: middle;
+    width: 200px;  /* ancho de tabla*/
+    background-color: rgb(253, 253, 150, .6); /* Azul con 50% de transparencia */
+}
+.Totalopen {
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    margin-right: 180px;
+    font-size: 30px;  
+    text-align: center;
+    justify-content: center;
+    vertical-align: middle;
+    width: 185px;  /* ancho de tabla*/
+    background-color: rgb(253, 253, 150, .6); /* Azul con 50% de transparencia */
+}

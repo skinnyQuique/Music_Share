@@ -1,0 +1,160 @@
+/* --------------------------------------Modificaciones para el fondo de la pagina o cuerpo*/
+body {
+    /*background-image: linear-gradient(90deg,#80bfff, #dcdcdc);--------------------------------------------
+    /*background-size: 100%;/* Ancho del patrón---------------------ESTO ES PARA PONERLE FONDO DE COLOR A LA PAGINA
+    /*background-repeat: repeat-y; /* Repetir verticalmente ------------------------------------------------*/
+    background-image: url('imagenes-Diseño/fondo-8.jpg'); /* Imagen de fondo */
+    background-size: cover;     /* Lograr expandir la imagen a toda la pagina */
+    background-attachment: fixed; /* esto fija la imagen de fondo */
+    margin: 0px;
+}
+/* -------------------------------------- Se refiere al cuadro del menu o encabezado de pagina inicial*/
+header {
+    background-color: #ffff00;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+}
+.icono {
+    width: 40px;
+    height: 30px;
+    filter: grayscale(100%);
+}
+/* -------------------------------------- Tabla de navegacion y espacios*/
+.TablaNav {
+    width: 100%;
+    /* border: solid #000 1px;  Opcion que suo para revisar diseño de espacio*/
+}
+/* -------------------------------------- opcines de navegacion (td)*/
+.OpNav {
+    width: 20%;
+    /* border: solid #000 1px; */
+}
+/* -------------------------------------- Opciones de navegacion (a) esto hace toda la chamba*/
+.OpNav a {
+    text-decoration: none;
+    font-family: "lato", sans-serif;
+    color: #000;
+    font-weight:900;
+    width: 50%;
+    /* border: solid #000 1px; */
+    transition: 0.3s;
+}
+/* -------------------------------------- Movimiento de opciones al acercar el cursor */
+.OpNav:hover {
+    transform: scale(1.1);
+}
+/* ------------------------------------------------------------------------------------Titulo de contenedor*/
+.title {
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+/* ------------------------------------------------------------------------------------formato de formulario */
+.form {
+    background-color: rgb(255, 255, 255);
+    width: 70%;
+    border-radius: 8px;         /* este se encarga de darle cierto margen redondo*/
+    padding: 20px 40px;
+    box-shadow: 0 10px 25px rgba(92, 99, 105, .8);  /*Se ajusta a cualquier pantalla de dispositivo*/
+}
+/*------------------------------------------------------------------------------------ formato contenedor */
+.Tabla {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;           /* centramos elemento de manera horizontal*/
+}
+/* ------------------------------------------------------------------------------------Formato casillas */
+.Casillas {
+    position: relative;     /*lo pocisionabos con respecto al contenedor*/
+    height: 45px;
+    width: 95%;
+    margin-bottom: 17px;
+}
+/*------------------------------------------------------------------------------------ formato inputs */
+.Ingreso {
+    position: absolute;     /*fija un elemento de manera absoluta a su contenedor*/
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #DADCE0;
+    border-radius: 7px;
+    font-size: 16px;
+    padding: 0 20px;        /*agregamos espacio de relleno al elemento*/
+    outline: none;
+    background: none;
+    z-index: 1;             /*aqui se transaladara la etiqueta hasta llegar a 0*/
+}
+/*---------------------------------------------------------------------------------ocultar para evitar sobre escritura */
+::placeholder {
+    color: transparent;
+}
+/* ------------------------------------------------------------------------------------formatos label */
+.label {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 0 4px;
+    background-color: white;
+    color: #DADCE0;
+    font-size: 16px;
+    transition: 0.5s;       /*esta hace el efecto de animacion-*/
+    z-index: 0;             /*Aqui se colocora la etiqueta mayor*/
+}
+/*-----------------------------------------------------------------------------combinacion de formatos para transicion */
+.Ingreso:focus + .label {
+    top: -7px;
+    left: 3px;
+    z-index: 10;            /*coloca este valor mayor sobre el menor*/
+    font-size: 14px;
+    font-weight: 600;
+    color: #9B9B9B;
+}
+/* ------------------------------------------------------------------------------------------resaltar casilla */
+.Ingreso:focus {
+    border: 2px solid #9b9b9b;
+}
+.Ingreso:not(:placeholder-shown)+ .label {
+    top: -7px;
+    left: 3px;
+    z-index: 10;
+    font-size: 14px;
+    font-weight: 600;
+}
+/* ------------------------------------------------------------------------------------boton de mandar datos */
+.Boton{     
+    display: block;
+    margin-left: auto;
+    padding: 15px 30px;
+    border: none;
+    background-color: #ffff00;
+    color: black;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s;   /* Movimiento del boton*/
+    margin-top: 30px;
+}
+/* --------------------------------------------------------------------------------- animacion de boton de mandar datos*/
+.Boton:hover {
+    transform: scale(1.1); /* Escala el botón al 110% cuando el cursor esté sobre él */
+    background-color: #687EFF;
+    transform: translateY(-2px);        /*mover elemento 2 pixeles arriba*/
+}
+/* -------------------------------------- Se refiere al cuadro del menu o encabezado de pagina final*/
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffff00;
+    color: #000;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+.iconos {
+    width: 50px;
+    height: 50px;
+    filter: grayscale(100%);
+}
